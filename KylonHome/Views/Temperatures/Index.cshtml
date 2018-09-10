@@ -1,0 +1,66 @@
+﻿@model IEnumerable<KylonHome.Models.Temperature>
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create">增加新記錄</a>
+</p>
+<!-- 搜索、查詢功能 -->
+@using (Html.BeginForm("Index", "Temperatures", FormMethod.Get))
+{
+    <div>
+        <pre>
+    @Html.DisplayNameFor(model => model.DeviceName): @Html.TextBox("DeviceName")&nbsp; @Html.DisplayNameFor(model => model.AcquisitionTime)範圍: @Html.TextBox("Begin") - @Html.TextBox("End")
+<br />&nbsp;&#9;<input type="submit" value="查  詢" />&nbsp;&#9;<button id="toExcel" name="toExcel">導出報表到Excel</button>
+</pre>
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DeviceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Temp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Humidity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AcquisitionTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Memo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeviceName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Humidity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AcquisitionTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Memo)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">編輯</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">詳情</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">刪除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
