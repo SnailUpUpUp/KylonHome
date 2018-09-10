@@ -15,6 +15,7 @@
 </pre>
     </div>
 }
+<div id="mainChart" style="width: 1000px;height: 400px;"></div>
 <table class="table">
     <thead>
         <tr>
@@ -33,7 +34,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Memo)
             </th>
-            <th></th>
+            <th>操作</th>
         </tr>
     </thead>
     <tbody>
@@ -64,3 +65,37 @@
         }
     </tbody>
 </table>
+<script type="text/javascript" src="~/js/echarts.common.min.js"></script>
+<script type="text/javascript">
+        //基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('mainChart'));
+        //指定图表的配置项和数据
+        var option={
+             title:{
+                 text:'溫度圖表'
+             },
+             tooltip:{},
+             legend:{
+                 data:['Sold Amount']
+              },
+              xAxis:{
+                  data:@Html.Raw(
+                      Json.Serialize(
+                          Model.OrderBy(t=>t.AcquisitionTime)
+                                .Select(t => t.AcquisitionTime.ToString("yyyy/MM/dd HH:mm")
+                              )
+                          )
+                      )
+              },
+              yAxis:{},
+              series:[{
+                  name:'Sold Number',
+                  type:'line',
+                  data:@Html.Raw(Json.Serialize(Model.Select(t=>t.Temp))),
+              }]
+        };
+
+
+          //使用刚指定的配置项和数据显示图表
+          myChart.setOption(option);
+</script>

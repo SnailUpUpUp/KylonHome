@@ -72,7 +72,7 @@ namespace KylonHome
                 options.SlidingExpiration = true;
             });
 
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            // services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
