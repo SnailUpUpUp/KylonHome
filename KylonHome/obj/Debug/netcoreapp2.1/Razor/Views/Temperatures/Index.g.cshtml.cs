@@ -67,7 +67,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(92, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "74ef2d3bdf9d48d48bc8079d83c8ac7a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6a8f69a28d4d4b06aa5c0d1f93af5eec", async() => {
                 BeginContext(115, 5, true);
                 WriteLiteral("增加新記錄");
                 EndContext();
@@ -265,7 +265,7 @@ Write(Html.DisplayNameFor(model => model.DeviceName));
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1858, 51, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1383b1e4cf9f46ab8bd68769752a172f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "118f61e15dd44537af840e2b7b4a344e", async() => {
                 BeginContext(1903, 2, true);
                 WriteLiteral("編輯");
                 EndContext();
@@ -300,7 +300,7 @@ Write(Html.DisplayNameFor(model => model.DeviceName));
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1933, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e35b83f062c44c7385df2ecadf475e06", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "358241f3c8474f7f80369d78a8750b5f", async() => {
                 BeginContext(1981, 2, true);
                 WriteLiteral("詳情");
                 EndContext();
@@ -335,7 +335,7 @@ Write(Html.DisplayNameFor(model => model.DeviceName));
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(2011, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d53989f304654f9dbe34845ec23588b3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7073a32985144a38a8035dd2df65c949", async() => {
                 BeginContext(2058, 2, true);
                 WriteLiteral("刪除");
                 EndContext();

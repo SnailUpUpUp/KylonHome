@@ -164,7 +164,7 @@ using KylonHome.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(1073, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8322780a6a0e4d0398666f4ef41b8ec8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f568e42251247849860b9f1fa0e33c9", async() => {
                 BeginContext(1119, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -199,7 +199,7 @@ using KylonHome.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(1135, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69cc244ed8224bf69caa73c8efdc1030", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "71a08be5e5934250894142849679abb1", async() => {
                 BeginContext(1157, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();
