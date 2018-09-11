@@ -91,7 +91,12 @@
               series:[{
                   name:'Sold Number',
                   type:'line',
-                  data:@Html.Raw(Json.Serialize(Model.Select(t=>t.Temp))),
+                  data:@Html.Raw(
+                      Json.Serialize(
+                          Model.OrderBy(t=>t.AcquisitionTime)
+                          .Select(t=>t.Temp)
+                      )
+                  ),
               }]
         };
 

@@ -70,3 +70,4 @@ E:\USR\Projects\GitHub\KylonHome\KylonHome\obj\Debug\netcoreapp2.1\Razor\Views\T
 E:\USR\Projects\GitHub\KylonHome\KylonHome\obj\Debug\netcoreapp2.1\Razor\Views\Temperatures\Details.g.cshtml.cs
 E:\USR\Projects\GitHub\KylonHome\KylonHome\obj\Debug\netcoreapp2.1\Razor\Views\Temperatures\Edit.g.cshtml.cs
 E:\USR\Projects\GitHub\KylonHome\KylonHome\obj\Debug\netcoreapp2.1\Razor\Views\Temperatures\Index.g.cshtml.cs
+E:\USR\Projects\GitHub\KylonHome\KylonHome\obj\Debug\netcoreapp2.1\KylonHome.csprojAssemblyReference.cache
