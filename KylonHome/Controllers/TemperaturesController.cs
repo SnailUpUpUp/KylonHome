@@ -23,8 +23,6 @@ namespace KylonHome.Controllers
         // GET: Temperatures
         public async Task<IActionResult> Index(string DeviceName, string Begin, string End)
         {
-            ViewData["Title"] = "溫濕度數據查詢";
-
             DateTime begin, end;
             if (!string.IsNullOrEmpty(Begin))
             {

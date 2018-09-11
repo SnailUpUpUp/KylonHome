@@ -1,17 +1,21 @@
 ﻿@model IEnumerable<KylonHome.Models.Temperature>
 
+@{ 
+    ViewData["Title"] = "温湿度数据查询";
+}
+
 <h2>@ViewData["Title"]</h2>
 
 <p>
-    <a asp-action="Create">增加新記錄</a>
+    <a asp-action="Create">增加新记录</a>
 </p>
 <!-- 搜索、查詢功能 -->
 @using (Html.BeginForm("Index", "Temperatures", FormMethod.Get))
 {
     <div>
         <pre>
-    @Html.DisplayNameFor(model => model.DeviceName): @Html.TextBox("DeviceName")&nbsp; @Html.DisplayNameFor(model => model.AcquisitionTime)範圍: @Html.TextBox("Begin") - @Html.TextBox("End")
-<br />&nbsp;&#9;<input type="submit" value="查  詢" />&nbsp;&#9;<button id="toExcel" name="toExcel">導出報表到Excel</button>
+    @Html.DisplayNameFor(model => model.DeviceName): @Html.TextBox("DeviceName")&nbsp; @Html.DisplayNameFor(model => model.AcquisitionTime)范围: @Html.TextBox("Begin") - @Html.TextBox("End")
+<br />&nbsp;&#9;<input type="submit" value="查  询" />&nbsp;&#9;<button id="toExcel" name="toExcel">导出报表到Excel</button>
 </pre>
     </div>
 }
@@ -34,7 +38,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Memo)
             </th>
-            <th>操作</th>
+            <th>操  作</th>
         </tr>
     </thead>
     <tbody>
@@ -57,9 +61,9 @@
                     @Html.DisplayFor(modelItem => item.Memo)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">編輯</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">詳情</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">刪除</a>
+                    <a asp-action="Edit" asp-route-id="@item.ID">编辑</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">详情</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">删除</a>
                 </td>
             </tr>
         }
@@ -72,14 +76,14 @@
         //指定图表的配置项和数据
         var option={
              title:{
-                 text:'溫度圖表'
+                 text:'温湿度图表'
              },
              tooltip:{},
              legend:{
-                 data:['Sold Amount']
+                 data:['温度','湿度']
               },
-              xAxis:{
-                  data:@Html.Raw(
+             xAxis: {
+                data:@Html.Raw(
                       Json.Serialize(
                           Model.OrderBy(t=>t.AcquisitionTime)
                                 .Select(t => t.AcquisitionTime.ToString("yyyy/MM/dd HH:mm")
@@ -87,20 +91,31 @@
                           )
                       )
               },
-              yAxis:{},
-              series:[{
-                  name:'Sold Number',
+             yAxis:{},
+             series:[
+                {
+                  name:'温度',
                   type:'line',
                   data:@Html.Raw(
                       Json.Serialize(
                           Model.OrderBy(t=>t.AcquisitionTime)
                           .Select(t=>t.Temp)
+                          )
                       )
-                  ),
-              }]
+                },
+                {
+                    name: '湿度',
+                    type: 'line',
+                    data:@Html.Raw(
+                        Json.Serialize(
+                            Model.OrderBy(t=>t.AcquisitionTime)
+                            .Select(t=>t.Humidity)
+                            )
+                        )
+                }
+             ]
         };
 
-
-          //使用刚指定的配置项和数据显示图表
-          myChart.setOption(option);
+        //使用刚指定的配置项和数据显示图表
+        myChart.setOption(option);
 </script>

@@ -10,19 +10,19 @@ namespace KylonHome.Models
     {
         public int ID { get; set; }
 
-        [Display(Name ="設備名稱")]
+        [Display(Name ="设备名称")]
         public string DeviceName { get; set; }
 
-        [Display(Name ="溫度")]
+        [Display(Name ="温度")]
         public float Temp { get; set; }
 
-        [Display(Name = "濕度")]
+        [Display(Name = "湿度")]
         public float Humidity { get; set; }
 
-        [Display(Name = "採集時間")]
+        [Display(Name = "采集时间")]
         public DateTime AcquisitionTime { get; set; }
 
-        [Display(Name = "備注")]
+        [Display(Name = "备注")]
         public string Memo { get; set; }
     }
 }
