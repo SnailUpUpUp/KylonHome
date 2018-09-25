@@ -79,7 +79,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(138, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf4bc13f0d194bc593c8eaaf1e81f251", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30863c04885f49f3bbdf6dc8a7b0a616", async() => {
                 BeginContext(161, 5, true);
                 WriteLiteral("增加新记录");
                 EndContext();
@@ -277,7 +277,7 @@ Write(Html.DisplayNameFor(model => model.DeviceName));
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1973, 51, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5bd1ef6e2b584fe18b90a403863abe2c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "985394cc349842b4babd8f2798c02ba0", async() => {
                 BeginContext(2018, 2, true);
                 WriteLiteral("编辑");
                 EndContext();
@@ -312,7 +312,7 @@ Write(Html.DisplayNameFor(model => model.DeviceName));
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(2048, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1892b6fbaa7e4d90a0d3f902faa605b2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9cf0455d73d141218b09d46cd359a2d6", async() => {
                 BeginContext(2096, 2, true);
                 WriteLiteral("详情");
                 EndContext();
@@ -347,7 +347,7 @@ Write(Html.DisplayNameFor(model => model.DeviceName));
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(2126, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "631f80733b644f8eb0d43514eed48ba3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a95f770641f44c48ee5784d3dad66da", async() => {
                 BeginContext(2173, 2, true);
                 WriteLiteral("删除");
                 EndContext();
@@ -390,7 +390,7 @@ Write(Html.DisplayNameFor(model => model.DeviceName));
             WriteLiteral("    </tbody>\r\n</table>\r\n");
             EndContext();
             BeginContext(2258, 73, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bacda65896574c9ea40d9094d85c0a8d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7cbd6f8f0cd4316bb07056be3a2ebf9", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
