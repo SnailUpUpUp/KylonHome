@@ -1,74 +1,109 @@
 ﻿@model IEnumerable<KylonHome.Models.Temperature>
 
-@{ 
+@{
     ViewData["Title"] = "温湿度数据查询";
 }
-
 <h2>@ViewData["Title"]</h2>
+<hr />
+<div class="row">
+    <div class="col-sm-2 col-md-2 nav-sidebar">
+        <!-- 搜索、查詢功能 -->
+        <form asp-action="Index" method="get" class="form-horizontal nav nav-sidebar">
+            <fieldset>
+                <legend>查詢選項</legend>
+            </fieldset>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label class="control-label">@Html.DisplayNameFor(model => model.DeviceName):</label>
+                    <input id="DeviceName" name="DeviceName" type="text" value="" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label class="control-label">
+                        @Html.DisplayNameFor(model => model.AcquisitionTime)范围:
+                    </label>
+                    @Html.TextBox("Begin", null, null, new { @class = "form-control" }) ->
+                    @Html.TextBox("End", null, null, new { @class = "form-control" })
+                </div>
 
-<p>
-    <a asp-action="Create">增加新记录</a>
-</p>
-<!-- 搜索、查詢功能 -->
-@using (Html.BeginForm("Index", "Temperatures", FormMethod.Get))
-{
-    <div>
-        <pre>
-    @Html.DisplayNameFor(model => model.DeviceName): @Html.TextBox("DeviceName")&nbsp; @Html.DisplayNameFor(model => model.AcquisitionTime)范围: @Html.TextBox("Begin") - @Html.TextBox("End")
-<br />&nbsp;&#9;<input type="submit" value="查  询" />&nbsp;&#9;<button id="toExcel" name="toExcel">导出报表到Excel</button>
-</pre>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="submit" value="查  询" class="btn btn-primary" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <button id="toExcel" name="toExcel" class="btn btn-info">导出报表到Excel</button>
+                </div>
+            </div>
+        </form>
+        @*<ul class="nav nav-sidebar">
+            <li class="active"><a asp-action="Index">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a asp-action="Create">增加新记录</a></li>
+            <li><a href="#">查詢</a></li>
+            <li><a href="#">Export</a></li>
+        </ul>*@
+
     </div>
-}
-<div id="mainChart" style="width: 1000px;height: 400px;"></div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DeviceName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Temp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Humidity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AcquisitionTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Memo)
-            </th>
-            <th>操  作</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeviceName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Temp)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Humidity)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AcquisitionTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Memo)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">编辑</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">详情</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">删除</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="col-sm-10 col-md-10 nav-sidebar">
+
+        <div id="mainChart" style="width: auto;height: 360px;"></div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeviceName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Temp)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Humidity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AcquisitionTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Memo)
+                    </th>
+                    <th>操  作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DeviceName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Temp)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Humidity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AcquisitionTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Memo)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ID">编辑</a> |
+                            <a asp-action="Details" asp-route-id="@item.ID">详情</a> |
+                            <a asp-action="Delete" asp-route-id="@item.ID">删除</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
 <script type="text/javascript" src="~/js/echarts.common.min.js"></script>
 <script type="text/javascript">
         //基于准备好的dom，初始化echarts实例

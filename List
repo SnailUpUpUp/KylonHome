@@ -1,0 +1,41 @@
+[33mcommit 433ed20f20254dd002cb730af7ee71e8a584c2fd[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Bruce Zhang <32888751+SnailUpUpUp@users.noreply.github.com>
+Date:   Tue Sep 25 08:40:01 2018 +0800
+
+    TemperatureReady
+
+[33mcommit 740514aa5bcdd1222b8b867d9c6fbd56de8d0812[m
+Author: Bruce Zhang <32888751+SnailUpUpUp@users.noreply.github.com>
+Date:   Tue Sep 11 16:56:23 2018 +0800
+
+    Temp&HumidityWithECharts
+
+[33mcommit 4f8782532b825895cbd6f4fdd3600974e2c81ea7[m
+Author: Bruce Zhang <32888751+SnailUpUpUp@users.noreply.github.com>
+Date:   Tue Sep 11 09:14:02 2018 +0800
+
+    FixBug-DataFlowWrong
+
+[33mcommit f832977b57c75d34fbe3430905ad58fa91f7becd[m
+Author: Bruce Zhang <32888751+SnailUpUpUp@users.noreply.github.com>
+Date:   Mon Sep 10 16:10:21 2018 +0800
+
+    TemperatureWithECharts
+    
+    Add ECharts
+
+[33mcommit 66c32bceff4a757a44a98b7135b6b02ec128815b[m
+Author: Bruce Zhang <32888751+SnailUpUpUp@users.noreply.github.com>
+Date:   Mon Sep 10 14:10:02 2018 +0800
+
+    TemperatureList-Api
+    
+    Add api to post new Temperature record
+
+[33mcommit 58cefeb54ed89eb5e44344773f4c6a3ecf253ebe[m
+Author: Bruce Zhang <32888751+SnailUpUpUp@users.noreply.github.com>
+Date:   Mon Sep 10 11:46:41 2018 +0800
+
+    TemperatureList
+    
+    Asp.netCore2.1,Identity,TemperatureList
