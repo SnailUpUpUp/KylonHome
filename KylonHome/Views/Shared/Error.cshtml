@@ -1,10 +1,13 @@
 ﻿@model ErrorViewModel
 @{
-    ViewData["Title"] = "Error";
+    ViewData["Title"] = "錯誤 - Error";
 }
 
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+<h1 class="text-danger">錯誤提示.</h1>
+<h2 class="text-danger">在處理您的請求時發生了一個錯誤.</h2>
 
 @if (Model.ShowRequestId)
 {
@@ -19,4 +22,14 @@
 </p>
 <p>
     <strong>Development environment should not be enabled in deployed applications</strong>, as it can result in sensitive information from exceptions being displayed to end users. For local debugging, development environment can be enabled by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>, and restarting the application.
+</p>
+
+<h3>開發者模式</h3>
+<p>
+    切換到 <strong>開發環境</strong> 可以在錯誤發生時顯示更多的信息。
+</p>
+<p>
+    <strong>在生成部署程序時開發環境默認不會打開</strong>， 
+    因為可能在出錯時向最終用戶展示敏感信息。
+    在本地調試時，開發環境將會打開通過將 <strong>ASPNETCORE_ENVIRONMENT</strong> 設置成  <strong>Development</strong> 并重啟應用程序。
 </p>
