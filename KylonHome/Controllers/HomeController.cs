@@ -16,7 +16,7 @@ namespace KylonHome.Controllers
             return View();
         }
 
-        [Authorize]
+        [AllowAnonymous]
         public IActionResult About()
         {
             ViewData["Message"] = "Server Current Datetime: " +DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
